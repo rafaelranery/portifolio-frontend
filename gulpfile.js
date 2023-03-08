@@ -4,6 +4,8 @@ const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 /* Plugins for Js compiling */
 const uglify = require('gulp-uglify');
+/* Plugins for Image Compress */
+const imageMin = require('gulp-imagemin');
 
 function compileSass() {
     return gulp.src('./source/styles/*.scss')
@@ -19,10 +21,19 @@ function compileJs() {
         .pipe(gulp.dest('./build/scripts'))
 }
 
+function compressImg() {
+    return gulp.src('./source/img/*')
+        .pipe(imageMin())
+        .pipe(gulp.dest('./build/img'))
+}
+
 exports.compileSass = compileSass;
 exports.compileJs = compileJs;
+exports.compressImg = compressImg;
 
 
 exports.default = function() {
     gulp.watch('./source/styles/main.scss', {ignoreInitial: false}, compileSass);
+    gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, compileJs);
+    gulp.watch('./source/img/*', {ignoreInitial: false}, compressImg);
 }
