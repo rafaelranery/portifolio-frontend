@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify');
 const imageMin = require('gulp-imagemin');
 
 function compileSass() {
-    return gulp.src('./source/styles/*.scss')
+    return gulp.src('./source/styles/main.scss')
     .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write('./maps'))
@@ -33,7 +33,7 @@ exports.compressImg = compressImg;
 
 
 exports.default = function() {
-    gulp.watch('./source/styles/main.scss', {ignoreInitial: false}, compileSass);
+    gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, compileSass);
     gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, compileJs);
     gulp.watch('./source/img/*', {ignoreInitial: false}, compressImg);
 }
