@@ -1,6 +1,10 @@
-body {
-    background-color: green;
-}
-header {
-    margin: 0 auto;
-}
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+
+
+
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '_custom'
