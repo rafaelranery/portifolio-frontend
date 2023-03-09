@@ -1,6 +1,7 @@
 /* Colors */
 $colorBgPrimary: #172774;
 $colorBgSecondary: #FF0075;
+$colorBgDark: #0d1746;
 $colorBtn: #77D970;
 $colorTextPrimary: #eeeeee;
 $colorTextSecondary: #eeeeeeda;
@@ -20,4 +21,9 @@ $fontSecondary: 'Space Grotesk', sans-serif;
 @mixin text {
     font-family: $fontSecondary;
     font-size: 1.25em;
+}
+
+@mixin link {
+    color: $colorTextPrimary;
+    margin: 0 0.4rem;
 }

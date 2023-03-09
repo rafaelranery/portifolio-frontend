@@ -1,8 +1,9 @@
-* {
-    border: 1px dotted pink;
-}
+// * {
+//     border: 1px dotted pink;
+// }
 @import 'config/reset.scss';
 @import 'config/variables.scss';
+@import 'header/header.scss';
 
 body {
     background-color: $colorBgPrimary;

@@ -1,0 +1,23 @@
+@import '../config/variables.scss';
+
+header {
+    background: $colorBgDark;
+    padding: 1rem 0;
+
+    .hamburger-btn {
+        background: $colorTextPrimary;
+        width: 10%;
+    }
+
+    .nav-link {
+        @include link;
+        @include title;
+        font-size: 1.5rem;
+        transition: all ease 0.3s;
+        letter-spacing: 2px;
+        &:hover {
+            color: $colorBgSecondary;
+            transform: scale(1.2);
+        }
+    }
+}
