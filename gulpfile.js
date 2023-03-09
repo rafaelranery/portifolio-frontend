@@ -33,7 +33,7 @@ exports.compressImg = compressImg;
 
 
 exports.default = function() {
-    gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, compileSass);
+    gulp.watch('./source/styles/**/*.scss', {ignoreInitial: false}, compileSass);
     gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, compileJs);
     gulp.watch('./source/img/*', {ignoreInitial: false}, compressImg);
 }

@@ -1,0 +1,23 @@
+/* Colors */
+$colorBgPrimary: #172774;
+$colorBgSecondary: #FF0075;
+$colorBtn: #77D970;
+$colorTextPrimary: #eeeeee;
+$colorTextSecondary: #eeeeeeda;
+
+/* Fonts */
+
+$fontPrimary: 'Chakra Petch', sans-serif;
+$fontSecondary: 'Space Grotesk', sans-serif;
+
+/* Mixins */
+
+@mixin title {
+    font-family: $fontPrimary;
+    font-size: 5em;
+    font-weight: bold;
+};
+@mixin text {
+    font-family: $fontSecondary;
+    font-size: 1.25em;
+}

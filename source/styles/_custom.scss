@@ -1,5 +1,30 @@
 * {
     border: 1px dotted pink;
 }
+@import 'config/reset.scss';
+@import 'config/variables.scss';
 
-@import 'reset'
+body {
+    background-color: $colorBgPrimary;
+    color: $colorTextPrimary;
+
+}
+
+.section {
+    &-title {
+        @include title;
+    }
+    &-text {
+        @include text;
+        color: $colorTextSecondary;
+    }
+    &-item-title {
+        @include title;
+        font-size: 2em;
+        font-weight: normal;
+    }
+    &-item-text {
+        @include text;
+        font-size: 1.25em;
+    }
+}
