@@ -5,6 +5,7 @@ $colorBgDark: #0d1746;
 $colorBtn: #77D970;
 $colorTextPrimary: #eeeeee;
 $colorTextSecondary: #eeeeeeda;
+$colorTextDark: #000;
 
 /* Breakpoints */
 
@@ -28,4 +29,14 @@ $fontSecondary: 'Space Grotesk', sans-serif;
 @mixin link {
     color: $colorTextPrimary;
     margin: 0 0.4rem;
+}
+
+@mixin section-colored {
+    background-color: $colorBgSecondary;
+
+    color: $colorTextDark;
+
+    .section-text {
+        color: $colorTextDark;
+    }
 }

@@ -1,0 +1,13 @@
+@import '../config/variables.scss';
+
+#skills {
+    @include section-colored;
+    ul {
+        list-style: none;
+        padding: 3px 0;
+        li img {
+            padding: 0 8px;
+        }
+    }
+}
+
