@@ -1,8 +1,8 @@
 // * {
 //     border: 1px dotted pink;
 // }
+@use 'config/variables.scss';
 @import 'config/reset.scss';
-@import 'config/variables.scss';
 @import 'header/header.scss';
 @import 'hero/hero.scss';
 @import 'skills/skills.scss';
@@ -33,4 +33,23 @@ body {
         @include text;
         font-size: 1.25em;
     }
+}
+
+/* responsive */
+@media screen and (max-width: variables.$tablet) {
+    #hero {
+        img {
+            max-height: 70vh;
+        }
+    }
+    #projects {
+        img {
+            margin-top: 0.2px;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: variables.$mobile) {
+    
 }
