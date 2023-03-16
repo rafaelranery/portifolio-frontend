@@ -6,15 +6,17 @@
     a {
         text-decoration: none;
         color: $colorTextDark;
-        transition: all ease .2s;
-
+        
         .section-text {
             font-size: 16px;
         }
-
-
-        img:hover {
-            transform: scale(1.02);
+        
+        img {
+            transition: all ease .2s;
+            height: 170px;
+            &:hover {
+                transform: scale(1.02);
+            }
         }
     }
 }
