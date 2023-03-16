@@ -40,3 +40,20 @@ $fontSecondary: 'Space Grotesk', sans-serif;
         color: $colorTextDark;
     }
 }
+
+@mixin btn {
+    background-color: $colorBtn;
+        padding: 16px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 12px;
+        font-family: $fontPrimary;
+        font-weight: bold;
+        display: block;
+        
+        &:hover {
+            cursor: pointer;
+            color: $colorTextPrimary;
+            background-color: darken($colorBtn, 25%);
+        }
+}

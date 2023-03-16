@@ -1,0 +1,23 @@
+@import '../config/variables.scss';
+
+#contact {
+    a {
+        @include link;
+        
+        img {
+            min-height: 2.50em;
+            transition: all ease 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.4);
+            }
+        }
+    }
+
+    button {
+        @include btn;
+        padding: 4px;
+        font-size: 1.25em;
+    }
+}

@@ -6,6 +6,15 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 /* Plugins for Image Compress */
 const imageMin = require('gulp-imagemin');
+const { parallel } = require('gulp');
+/* HTML minfiy */
+const htmlMin = require('gulp-htmlmin');
+
+function minifyHtml() {
+    return gulp.src('./source/index.html')
+    .pipe(htmlMin())
+    .pipe(gulp.dest('./build'))
+}
 
 function compileSass() {
     return gulp.src('./source/styles/main.scss')
@@ -30,10 +39,14 @@ function compressImg() {
 exports.compileSass = compileSass;
 exports.compileJs = compileJs;
 exports.compressImg = compressImg;
+exports.minifyHtml = minifyHtml;
 
 
-exports.default = function() {
+exports.watch = function() {
     gulp.watch('./source/styles/**/*.scss', {ignoreInitial: false}, compileSass);
     gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, compileJs);
     gulp.watch('./source/img/*', {ignoreInitial: false}, compressImg);
+    gulp.watch('./source/index.html', {ignoreInitial: false}, minifyHtml);
 }
+
+exports.default = parallel(compileSass, compileJs, compressImg, minifyHtml)
