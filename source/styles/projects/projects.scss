@@ -13,9 +13,11 @@
         
         img {
             transition: all ease .2s;
-            /* height: 170px; */
+            min-height: 135px;
+            border-radius: 8px;
+            margin-bottom: 16px;
             &:hover {
-                transform: scale(1.02);
+                box-shadow: 0 0 10px  #000;
             }
         }
     }
