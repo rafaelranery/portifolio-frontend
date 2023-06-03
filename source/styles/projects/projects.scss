@@ -3,12 +3,17 @@
 #projects {
     @include section-colored;
 
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
     a {
         text-decoration: none;
         color: $colorTextDark;
         
         .section-text {
-            font-size: 16px;
+            font-size: 14px;
         }
         
         img {
